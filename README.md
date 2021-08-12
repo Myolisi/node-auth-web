@@ -1,6 +1,6 @@
 # What's this about
 
-Front-end for; [node-auth-api](https://github.com/Myolisi/node-auth-api)
+An Angular Front-end for; [node-auth-api](https://github.com/Myolisi/node-auth-api)
 
 ## Getting it started
 
