@@ -1,0 +1,68 @@
+<div class="wrapper">
+  <div class="container-fluid py-3">
+    <div class="row justify-content-between">
+      <div class="col-md-2">
+        <h2>Destro</h2>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="mx-5 btn btn-primary">Take Me Home</button>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid login-wrapper vh-100">
+    <div class="row justify-content-center py-5">
+      <div class="card p-0" style="max-width: 800px">
+        <div class="row">
+          <div class="col-md-5">
+            <img
+              src="https://images.unsplash.com/photo-1574071397064-6adb9e02ef4f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+              class="img-fluid"
+              alt="..."
+              width="370"
+            />
+          </div>
+          <div class="col-md-6">
+            <h3 class="text-center my-4">Login</h3>
+
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <p>-</p>
+              <div class="mb-3">
+                <label for="username">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  formControlName="username"
+                  aria-describedby="usernameText"
+                />
+                <small id="usernameText" class="form-text text-muted">{{
+                  loginForm.get("username").touched &&
+                  loginForm.get("username").errors
+                    ? loginForm.get("username").errors
+                    : ("" | json)
+                }}</small>
+              </div>
+              <div class="mb-3">
+                <label for="username">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  formControlName="password"
+                />
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" />
+                <label class="form-check-label" for=""> Remember Me </label>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" name="" id="" class="btn btn-primary">
+                  Login
+                </button>
+              </div>
+              <a class="btn btn-link" href="#" role="button">Sing up</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
